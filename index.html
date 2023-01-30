@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Multi-step form</title>
+    <script src="javascript.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-container">
+        <div class="step">
+          <span class="step-num active-step">1</span>
+          <div class="step-texts">
+            <span>Step 1</span>
+            <p>Your Info</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-texts">
+            <span>Step 2</span>
+            <p>Select Plan</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-texts">
+            <span>Step 3</span>
+            <p>add-ons</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <div class="step-texts">
+            <span>Step 4</span>
+            <p>summary</p>
+          </div>
+        </div>
+        <div class="step helper-step">
+          <span class="step-num">4</span>
+          <div class="step-texts">
+            <span>Step 4</span>
+            <p>summary</p>
+          </div>
+        </div>
+      </div>
+      <div class="center-container">
+        <section class="personal-info section active-section">
+          <div class="section-container">
+            <h1 class="heading">Personal info</h1>
+            <p class="details">
+              Please provide your name, email address, and phone number
+            </p>
+            <div class="label-container">
+              <label class="label" for="name-input">Name</label>
+              <span class="required required__name hide"
+                >Please provide a valid name</span
+              >
+            </div>
+            <div class="all-inputs">
+              <input
+                type="text"
+                class="input name-input"
+                id="name-input"
+                spellcheck="false"
+                placeholder="e.g. Stephen King"
+              />
+              <div class="label-container">
+                <label class="label" for="email-input">Email Address</label>
+                <span class="required required__mail hide"
+                  >This Field is Required</span
+                >
+              </div>
+              <input
+                class="input mail-input"
+                type="email"
+                id="email-input"
+                spellcheck="false"
+                placeholder="e.g. stephenking@lorem.com"
+              />
+
+              <div class="label-container">
+                <label class="label" for="tel-input">Phone Number </label>
+                <span class="required required__phone hide"
+                  >This Field is Required</span
+                >
+              </div>
+              <input
+                class="input phone-input"
+                type="tel"
+                id="tel-input"
+                spellcheck="false"
+                placeholder="e.g. +1 234 567 890"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="select-plan section">
+          <div class="section-container">
+            <h1 class="heading">Select Your plan</h1>
+            <p class="details">
+              You have the option of monthly or yearly billing
+            </p>
+            <div class="all-plans-container">
+              <div class="all-plans">
+                <div class="plan-container">
+                  <img
+                    class="plan-img"
+                    src="assets/images/icon-arcade.svg"
+                    alt=""
+                  />
+                  <div class="plan-container-flex">
+                    <span class="plan-name">Arcade</span>
+                    <span
+                      class="price-description price-description__arcade margin--top"
+                      >$9/mo</span
+                    >
+                  </div>
+                </div>
+                <div class="plan-container">
+                  <img
+                    class="plan-img"
+                    src="assets/images/icon-advanced.svg"
+                    alt=""
+                  />
+                  <div class="plan-container-flex">
+                    <span class="plan-name">Advanced</span>
+                    <span
+                      class="price-description price-description__advanced margin--top"
+                      >$12/mo</span
+                    >
+                  </div>
+                </div>
+                <div class="plan-container">
+                  <img
+                    class="plan-img"
+                    src="assets/images/icon-pro.svg"
+                    alt=""
+                  />
+                  <div class="plan-container-flex">
+                    <span class="plan-name">Pro</span>
+                    <span
+                      class="price-description price-description__pro margin--top"
+                      >$15/mo</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <span class="no-plan-error hide"
+                >Please choose a plan from above</span
+              >
+            </div>
+            <div class="toggle-container">
+              <span class="month-or-year monthly-price active-price"
+                >Monthly</span
+              >
+              <input class="toggle-button" type="checkbox" id="switch" />
+              <label class="toggle-label" for="switch"></label>
+              <span class="month-or-year yearly-price">Yearly</span>
+            </div>
+          </div>
+        </section>
+        <section class="addons section">
+          <div class="section-container">
+            <h1 class="heading">Pick add-ons</h1>
+            <p class="details">Add-ons help enhance your gaming experience</p>
+            <label for="addons-checkbox">
+              <div class="addon-container container-flex">
+                <input
+                  type="checkbox"
+                  id="addons-checkbox"
+                  class="addons-checkbox online-service__checkbox"
+                  data-name="Online Service"
+                />
+                <div class="addons-text">
+                  <span class="plan-name plan-name__addons cursor-pointer"
+                    >Online service</span
+                  >
+                  <span class="price-description cursor-pointer">
+                    Access to multiplayer games
+                  </span>
+                </div>
+                <span class="price addon-price addon-price__online">
+                  +$1/mo</span
+                >
+              </div>
+            </label>
+            <label for="addons-checkbox1">
+              <div class="addon-container container-flex">
+                <input
+                  type="checkbox"
+                  id="addons-checkbox1"
+                  class="addons-checkbox larger-storage__checkbox"
+                  data-name="Larger Storage"
+                />
+                <div class="addons-text">
+                  <span class="plan-name plan-name__addons cursor-pointer"
+                    >Larger Storage</span
+                  >
+                  <span class="price-description cursor-pointer">
+                    Extra 1TB of could save
+                  </span>
+                </div>
+                <span
+                  isityear="false"
+                  class="price addon-price addon-price__larger"
+                >
+                  +$2/mo</span
+                >
+              </div>
+            </label>
+            <label for="addons-checkbox2">
+              <div class="addon-container container-flex">
+                <input
+                  type="checkbox"
+                  id="addons-checkbox2"
+                  class="addons-checkbox costumizable-profile__checkbox"
+                  data-name="Costumizable Profile"
+                />
+                <div class="addons-text">
+                  <span class="plan-name plan-name__addons cursor-pointer"
+                    >Costumizable Profile</span
+                  >
+                  <span class="price-description cursor-pointer">
+                    Costume theme on your profile
+                  </span>
+                </div>
+                <span
+                  isityear="false"
+                  class="price addon-price addon-price__costume"
+                >
+                  +$2/mo</span
+                >
+              </div>
+            </label>
+          </div>
+        </section>
+        <section class="finish-section section">
+          <div class="section-container">
+            <h1 class="heading">Finishing Up</h1>
+            <p class="details">
+              Double-check everything looks OK before confirming
+            </p>
+            <div class="finishing-container">
+              <div class="change-container">
+                <div class="change-text">
+                  <span class="plan-name plan-name__addons finishing-plan-name"
+                    >Arcade
+                  </span>
+                  <span class="finishing-plan-mo-yr"></span>
+                  <button class="change-btn">Change</button>
+                </div>
+                <div class="change-price">
+                  <span class="price finishing-price-plan">90</span>
+                </div>
+              </div>
+              <div class="extra-addons-container"></div>
+            </div>
+            <div class="total-container change-container">
+              <span class="price-description"
+                >Total (per<span class="per-time"></span>)</span
+              >
+              <span class="total-price">
+                $<span class="finishing-total-price"></span>/<span
+                  class="finishint-total-date"
+                ></span>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="section thank-section">
+          <div class="section-container thanks-container">
+            <img
+              class="thank-img"
+              src="assets/images/icon-thank-you.svg"
+              alt="tick image"
+            />
+            <h1 class="heading">Thank you!</h1>
+            <p class="thanks-text">
+              Thanks for comfirming your subscription! We hope you have fun
+              using our platform. if you ever need support, please feel free to
+              email us at support@overseas.com
+            </p>
+          </div>
+        </section>
+        <div class="btns">
+          <button class="next go-back-btn hide">Go Back</button>
+          <button class="next go-next-btn">Next Step</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
